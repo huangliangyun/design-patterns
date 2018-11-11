@@ -16,13 +16,17 @@ public class Boss {
     //老板列表
     private static ArrayList<Boss> bossList = new ArrayList(maxBoss);
     private  static  int thisBoss = 0;//目前哪个老板负责
+
+    //初始化几个老板
     static {
         for(int i=0;i<3;i++){
             bossList.add(new Boss("老板"+i));
         }
     }
+
     private Boss() {
     }
+
     private Boss(String bossName) {
          this.bossName = bossName;
     }
