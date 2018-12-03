@@ -1,6 +1,7 @@
 package com.hly.designPatterns.builderPattern;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author :hly
@@ -26,6 +27,7 @@ public class Client {
         Direct direct = new Direct();
         direct.getMusicApp().run();
         direct.getPesticideApp().run();
-    }
 
+        List<String> list = new ArrayList<>();
+    }
 }
