@@ -1,0 +1,14 @@
+父类调用子类的方法
+1.把子类传递到父类的有参构造中
+2.使用反射的方式调用
+3.父类调用子类静态方法
+
+模板方法
+修改了子类，影响了父类的结果，模板方法模式的效果
+
+List list = new ArrayList();这句创建了一个ArrayList的对象后把上溯到了List。此时它是一个List对象了，有些ArrayList有但是List没有的属性和方法，它就不能再用了。
+而ArrayList list=new ArrayList();创建一对象则保留了ArrayList的所有属性。
+
+1.两个String其实只有第一个起作用，后面一个没什么卵用，只不过JDK7才开始支持List<String>list = new ArrayList<>;
+并建议使用“List<String> list = new ArrayList<>()”这种写法。
+2.第一个String就是告诉编译器，List中存储的是String对象，也就是起类型检查的作用，之后编译器对会擦除泛型占位符，以保证兼容以前的代码。
